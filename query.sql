@@ -80,4 +80,4 @@ insert into rating values(14, 114, 1);
 insert into rating values(15, 115, 1);
 insert into rating values(16, 116, 0);
 
-
+SELECT CUS_GENDER, count(CUS_GENDER) as Total_Customer from customer where CUS_ID IN (select CUS_ID from orders where ORD_AMOUNT >=3000) group by CUS_GENDER;
